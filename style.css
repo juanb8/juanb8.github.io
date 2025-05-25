@@ -1,0 +1,60 @@
+:root{
+	--background:#fdf0d5; 
+	--primary:#c1121f ; 
+	--secondary: #780000 ; 
+	--terciary: #003049; 
+	--fourth: #669bbc;  
+	--box1:#BB3E00;
+	--box2:#F7AD45;
+	--box3:#657C6A;
+	--box4:#A2B9A7;
+	--box5:#4A102A;
+	--box6:#85193C;
+	--box7:#C5172E;
+	--box8:#8ecae6;
+	--box9:#ffb703;
+	--box10:#219ebc;
+	--box11:#023047;
+	--box12:#fb8500;
+	--box13:#ffafcc;
+}
+.header-conteiner{
+	display:flex;
+	background-color:var(--secondary);
+}
+.header-conteiner h1 {
+	font-family: "WDXL Lubrifont TC", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	color: var(--primary)
+}
+.main-conteiner{
+	display:flex;
+	flex-direction: column; 	
+}
+.section-conteiner{
+	display:flex;
+	flex-grow: 1;
+}
+.training-card{
+	display:flex; 
+	flex-direction:column;
+}
+.grid-conteiner{
+	display:grid; 
+	grid-template-columns: 250px  250px  250px  250px;
+	grid-template-rows: 250px  250px  250px  250px 250px  250px  250px;
+}
+.grid-item{
+	display: flex; 
+	flex-direction:column; 	
+	border:5px;
+	border-style:solid; 
+	border-color: var(--terciary); 
+	height:250px;
+	width:250px;
+}
+.grid-item iframe{
+	height: 100%;
+	width:100%;
+}
