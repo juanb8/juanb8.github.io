@@ -1,0 +1,29 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+	let cart = JSON.parse(localStorage.getItem("cart")) || [];
+	console.log("Cart loaded "+cart.length);
+	console.log("DOM fully loaded and parsed");
+	console.log(cart); 
+	async function load_cart(){
+		try{
+			const res = await fetch('https://dummyjson.com/products');
+			const data = await res.json();
+			cart.push(data.products[0]);  
+			console.log(cart); 
+		}
+		catch(error) {console.log('Error:' error)}; 
+
+	}; 
+	const product_cart_render = () => {
+		const conteiner = document.getElementById('containerClothing'); 
+		
+		cart.forEach((product) =>{
+			console.log(product.title); 
+			let node = document.createElement("h2"); 
+			node.appendChild(document.createTextNode(product.title)); 
+			conteiner.appendChild(node);
+				}
+			);
+		};   
+	load_cart(); 
+
+});
