@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 		delete_cart_handler(); 
 		window.location.href = './index.html'; 
 	} );
-	const buy_node = document.getElementById('empty_cart'); 
+	const buy_node = document.getElementById('empty-cart'); 
 	buy_node.addEventListener('click',delete_cart_handler);
 
 
